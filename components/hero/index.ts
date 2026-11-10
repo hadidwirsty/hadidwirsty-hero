@@ -1,7 +1,1 @@
-export { AnimatedCounter } from "./animated-counter"
-export { HeroFooter } from "./hero-footer"
-export { HeroSection } from "./hero-section"
-export { InteractivePreview } from "./interactive-preview"
-export { MetricsStrip } from "./metrics-strip"
-export { Navbar } from "./navbar"
 export { ParallaxHero } from "./parallax-hero"

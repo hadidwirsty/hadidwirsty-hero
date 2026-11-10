@@ -55,7 +55,7 @@
 - 🌄 **Multi-Plane Parallax Scroll:** Tumpukan 4 lapisan seni pegunungan (*clouds, citadel factory, misty valley, foreground mountain ridge*) yang bergerak pada rasio kedalaman berbeda terhadap posisi gulir pengguna.
 - ⚡ **Optimasi Performa Gambar:** Memanfaatkan komponen `<Image />` bawaan Next.js dengan atribut `priority` dan kompresi format otomatis AVIF/WebP.
 - 🎨 **Palet Warna OKLCH & Tailwind v4:** Sistem tema modern dengan variabel warna OKLCH berdaya kontras tinggi dan dukungan *Dark/Light Mode* melalui `next-themes` (dilengkapi pintasan papan ketik <kbd>D</kbd>).
-- 🧩 **Arsitektur Komponen Modular:** Koleksi komponen siap pakai yang rapi di `@/components/hero` (`ParallaxHero`, `Navbar`, `InteractivePreview`, `MetricsStrip`, `AnimatedCounter`, `HeroFooter`).
+- 🧩 **Arsitektur Komponen Modular:** Komponen terisolasi dan bersih di `@/components/hero` (`ParallaxHero`).
 - 💎 **Bebas Masalah Rendering:** Menggunakan `useSyncExternalStore` untuk mendeteksi *mounting* sisi klien tanpa memicu *cascading renders* pada React 19.
 
 ### Teknologi yang Digunakan
@@ -79,16 +79,10 @@ hadidwirsty-hero/
 ├── app/
 │   ├── globals.css              # Konfigurasi Tailwind v4, @theme inline, variabel OKLCH
 │   ├── layout.tsx               # Root HTML layout (Inter + Geist_Mono, ThemeProvider)
-│   └── page.tsx                 # Halaman utama mengintegrasikan ParallaxHero & Showcase
+│   └── page.tsx                 # Halaman utama dengan ParallaxHero background scroll
 ├── components/
 │   ├── hero/                    # Modul komponen Hero
-│   │   ├── animated-counter.tsx # Counter angka animasi pegas (spring physics)
-│   │   ├── hero-footer.tsx      # Footer penutup aplikasi
-│   │   ├── hero-section.tsx     # Section hero sekunder
 │   │   ├── index.ts             # Barrel export modular
-│   │   ├── interactive-preview.tsx # Showcase komparasi AI Sebelum/Sesudah
-│   │   ├── metrics-strip.tsx    # Papan metrik statistik 4 angka riil
-│   │   ├── navbar.tsx           # Header navigasi transparan (glassmorphism)
 │   │   └── parallax-hero.tsx    # Mesin animasi scroll parallax 4-lapisan
 │   └── ui/                      # Komponen primitif shadcn / Base UI
 ├── public/
