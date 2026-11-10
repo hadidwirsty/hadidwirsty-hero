@@ -1,8 +1,10 @@
 {
   "name": "hadidwirsty-hero",
   "version": "0.0.1",
+  "description": "High-impact portfolio hero experience featuring multi-plane scrollytelling parallax animation powered by Next.js 16, React 19, Tailwind CSS v4, and Motion.",
   "type": "module",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,6 +18,7 @@
     "class-variance-authority": "^0.7.1",
     "cn": "^0.5.2",
     "lucide-react": "^1.71.0",
+    "motion": "^14.11.1",
     "next": "16.4.4",
     "next-themes": "^0.4.6",
     "react": "19.3.1",

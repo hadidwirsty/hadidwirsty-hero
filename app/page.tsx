@@ -1,19 +1,30 @@
-import { Button } from "@/components/ui/button"
+import {
+  HeroFooter,
+  InteractivePreview,
+  MetricsStrip,
+  Navbar,
+  ParallaxHero,
+} from "@/components/hero"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
+      <Navbar />
+      <main className="flex-1">
+        <ParallaxHero />
+        <section
+          id="produk"
+          className="relative z-10 bg-background py-20 md:py-28"
+        >
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <InteractivePreview />
+            <div id="metrik" className="mt-20">
+              <MetricsStrip />
+            </div>
+          </div>
+        </section>
+      </main>
+      <HeroFooter />
     </div>
   )
 }
